@@ -21,23 +21,15 @@ public class Tp33 {
             System.out.println("Veuillez entrer le mot de passe : ");
             mdpAtester = keyboardInput.nextLine();
 
-            if (emailATester.compareTo(email) == 0 && mdpAtester.compareTo(mdp) == 0) {
+            if (!emailATester.equals(email) || !mdpAtester.equals(mdp) ) {
 
-                System.out.println("correct");
-                break;
-            } else {
-                i++;
-                if (i >= 5) {
-                    System.out.println("votre compte est bloqué");
-                    break;
-                }
                 System.out.println("veuillez recommencez");
                 i++;
                 if (i >= 5) {
                     System.out.println("votre compte est bloqué");
                     break;
-                }
-            }
+                 }continue;
+               }System.out.println("correct");
 
 
         } while (true);
